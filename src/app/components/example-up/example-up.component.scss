@@ -1,0 +1,56 @@
+@import "breakpoints";
+// https://getbootstrap.com/docs/4.0/utilities/spacing/
+// https://getbootstrap.com/docs/4.0/utilities/colors/
+// https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
+// Warning with xs: https://getbootstrap.com/docs/4.0/migration/#responsive-utilities
+
+.test {
+  &-xs,
+  &-sm,
+  &-md,
+  &-lg,
+  &-xl {
+    color: white;
+    display: none;
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query since this is the default in Bootstrap
+  &-xs {
+    background-color: ($secondary);
+    display: block;
+  }
+
+  // (sm) Small devices (landscape phones, 576px and up)
+  @include media-breakpoint-up(sm) {
+    &-sm {
+      background-color: ($primary);
+      display: block;
+    }
+  }
+
+  // (md) Medium devices (tablets, 768px and up)
+  @include media-breakpoint-up(md) {
+    &-md {
+      background-color: ($success);
+      display: block;
+    }
+  }
+
+  // (lg) Large devices (desktops, 992px and up)
+  @include media-breakpoint-up(lg) {
+    &-lg {
+      background-color: ($warning);
+      display: block;
+    }
+  }
+
+  // (xl) Extra large devices (large desktops, 1200px and up)
+  // No media query since the extra-large breakpoint has no upper bound on its width
+  @include media-breakpoint-up(xl) {
+    &-xl {
+      background-color: ($info);
+      display: block;
+    }
+  }
+}

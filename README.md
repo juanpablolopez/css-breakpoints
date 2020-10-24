@@ -1,2 +1,15 @@
-# css-breakpoints
-Little css breakpoints example with angular
+# Up
+
+![](assets/up.gif)
+
+---
+
+# Down
+
+![](assets/down.gif)
+
+---
+
+# Only
+
+![](assets/only.gif)

@@ -1,0 +1,58 @@
+@import "breakpoints";
+
+.test {
+  &-xs,
+  &-sm,
+  &-md,
+  &-lg,
+  &-xl {
+    color: white;
+    display: none;
+    text-align: center;
+  }
+
+  // (xs) Extra small devices (portrait phones, Between 0 and 575.98px)
+  // @media (max-width: 575.98px) { ... }
+  @include media-breakpoint-only(xs) {
+    &-xs {
+      background-color: ($secondary);
+      display: block;
+    }
+  }
+
+  // (sm) Small devices (landscape phones, Between 576px and 767.98px)
+  // @media (min-width: 576px) and (max-width: 767.98px) { ... }
+  @include media-breakpoint-only(sm) {
+    &-sm {
+      background-color: ($primary);
+      display: block;
+    }
+  }
+
+  // (md) Medium devices (tablets, Between 768px and 991.98)
+  // @media (min-width: 768px) and (max-width: 991.98px) { ... }
+  @include media-breakpoint-only(md) {
+    &-md {
+      background-color: ($success);
+      display: block;
+    }
+  }
+
+  // (lg) Large devices (desktops, Between 992px and 1199.98px)
+  // @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+  @include media-breakpoint-only(lg) {
+    &-lg {
+      background-color: ($warning);
+      display: block;
+    }
+  }
+
+  // (xl) Extra large devices (large desktops, 1200px and up)
+  // @media (min-width: 1200px) { ... }
+  @include media-breakpoint-only(xl) {
+    &-xl {
+      background-color: ($info);
+      display: block;
+    }
+  }
+}
